@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Research, data, and professional experience of Joshua Teye, PhD Candidate in Economics at West Virginia University.">
+  <title>Experience | Joshua Teye</title>
+  <link rel="canonical" href="https://jteye8317.github.io/experience.html">
+  <meta name="google-site-verification" content="BmAEZ_e2Y_XpYz3XwTeQ1vOb4aZKEHvPE95MhcZ8lzc">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">Joshua Teye</a>
+    <button class="menu-btn" aria-label="Open menu">☰</button>
+    <nav class="links" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="experience.html">Experience</a>
+      <a href="https://scholar.google.com/citations?user=lvqh20IAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar</a>
+      <a href="Joshua_Teye_CV.pdf" target="_blank" rel="noopener">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap narrow">
+      <p class="eyebrow">Experience</p>
+      <h1 class="page-title">Research &amp; Data Experience</h1>
+      <p class="page-intro">
+        My applied work combines economic analysis, data management, visualization, and quantitative research
+        across academic, regional-development, and transportation settings.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="experience-grid">
+        <article>
+          <h3>Eastgate Regional Council of Governments</h3>
+          <p class="role">Data Analytics Intern · Oct 2019 – Aug 2022</p>
+          <p>
+            Built and maintained an Economic Development Administration project database,
+            assembled and cleaned regional economic and demographic data, and produced
+            visualizations and summary analyses for planners, local officials, and non-technical stakeholders.
+          </p>
+        </article>
+
+        <article>
+          <h3>Western Reserve Transit Authority</h3>
+          <p class="role">Data Analytics Project · Aug 2022 – Dec 2022</p>
+          <p>
+            Used Python and R to analyze mobile-location data, conducted cluster analysis,
+            and built an interactive Tableau dashboard for an autonomous-vehicle route study.
+          </p>
+        </article>
+      </div>
+
+      <div class="methods">
+        <div>
+          <h3>Methods</h3>
+          <p>Difference-in-differences, triple differences, event studies, randomization inference, multiple-testing corrections, and regression analysis.</p>
+        </div>
+        <div>
+          <h3>Software</h3>
+          <p>R, Stata, Python, SQL, SAS, SPSS, IMPLAN, Tableau, Excel, and LaTeX.</p>
+        </div>
+        <div>
+          <h3>Data</h3>
+          <p>CMS Medicaid claims, American Community Survey, relational databases, predictive modeling, and large administrative and survey datasets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="wrap footer-row">
+    <span>© <span id="year"></span> Joshua Teye</span>
+    <span>West Virginia University · Economics</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const btn = document.querySelector(".menu-btn");
+  const links = document.querySelector(".links");
+
+  btn.addEventListener("click", () => links.classList.toggle("open"));
+
+  document.querySelectorAll(".links a").forEach(a => {
+    a.addEventListener("click", () => links.classList.remove("open"));
+  });
+</script>
+</body>
+</html>
