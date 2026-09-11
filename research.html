@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Research and publications by Joshua Teye, PhD Candidate in Economics at West Virginia University.">
+  <title>Research | Joshua Teye</title>
+  <link rel="canonical" href="https://jteye8317.github.io/research.html">
+  <meta name="google-site-verification" content="BmAEZ_e2Y_XpYz3XwTeQ1vOb4aZKEHvPE95MhcZ8lzc">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-row">
+    <a class="site-name" href="index.html">Joshua Teye</a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="experience.html">Experience</a>
+      <a href="Joshua_Teye_CV.pdf" target="_blank" rel="noopener">CV</a>
+      <a href="https://scholar.google.com/citations?user=lvqh20IAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container text-width">
+      <p class="kicker">Research</p>
+      <h1 class="page-title">Research &amp; Publications</h1>
+      <p class="lead">
+        My research examines health insurance, Medicaid policy, labor-market behavior, administrative burden,
+        and legislative behavior using applied microeconometric methods and large survey and administrative datasets.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container research-list">
+      <article class="research-item featured">
+        <div class="research-meta">Job Market Paper · 2026</div>
+        <div>
+          <h2>Extending Postpartum Medicaid Without Discouraging Work</h2>
+          <p class="paper-subtitle">Evidence from the 12-Month Coverage Extension</p>
+          <p>
+            The American Rescue Plan Act allowed states to extend pregnancy-related Medicaid coverage from
+            sixty days to twelve months postpartum. Using American Community Survey data and a triple-differences
+            design, I compare recent mothers with mothers of older children in states where the extension was legally
+            in force versus states where it was not when Medicaid redeterminations resumed in 2023.
+          </p>
+          <p>
+            Under the preferred legal-effective-date coding, the extension increased Medicaid coverage among
+            low-income recent mothers by roughly 3–4 percentage points, with no systematic reduction in employment,
+            labor-force participation, or hours worked.
+          </p>
+        </div>
+      </article>
+
+      <article class="research-item">
+        <div class="research-meta">Working Paper · 2026</div>
+        <div>
+          <h2>Postpartum Medicaid Expansion, Coverage Unwinding, and Maternal Insurance Coverage</h2>
+          <p>Grossman, D., Hill, E., Patil, A., Sventek, G., and Teye, J. (author order alphabetical).</p>
+          <p>Working draft using CMS administrative claims and the American Community Survey.</p>
+        </div>
+      </article>
+
+      <article class="research-item">
+        <div class="research-meta">Published · 2025</div>
+        <div>
+          <h2>The Political Economy of Veto Overrides: Evidence from the Justice Against Sponsors of Terrorism Act (JASTA)</h2>
+          <p>Teye, J., and Kemboi, D.</p>
+          <p><em>Peace Economics, Peace Science and Public Policy</em>, 31(3), 305–321.</p>
+          <a class="text-link" href="https://doi.org/10.1515/peps-2024-0058" target="_blank" rel="noopener">Article ↗</a>
+        </div>
+      </article>
+
+      <article class="research-item">
+        <div class="research-meta">Policy Report · 2021</div>
+        <div>
+          <h2>Economic Impacts of Mahoning County Land Bank</h2>
+          <p>Teye, J.</p>
+          <p>Prepared for the Mahoning County Land Reutilization Corporation, Youngstown State University.</p>
+          <a class="text-link" href="https://mahoninglandbank.com/wp-content/uploads/2021/06/Mahoning-County-Land-Bank-Economic-Impact-Report.pdf" target="_blank" rel="noopener">Report ↗</a>
+        </div>
+      </article>
+
+      <div class="dissertation-box">
+        <p class="section-label">Dissertation</p>
+        <h2>Three Essays on Public Policy: Health Insurance, Administrative Burden, and Legislative Behavior</h2>
+        <p>Chair: Professor Daniel Grossman</p>
+      </div>
+
+      <div class="methods-grid">
+        <div><h3>Methods</h3><p>Difference-in-differences, triple differences, event studies, randomization inference, multiple-testing corrections, regression analysis.</p></div>
+        <div><h3>Software</h3><p>R, Stata, Python, SQL, SAS, SPSS, IMPLAN, Tableau, Excel, LaTeX.</p></div>
+        <div><h3>Data</h3><p>CMS Medicaid claims, American Community Survey, relational databases, predictive modeling, and other large administrative and survey datasets.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <span>© <span id="year"></span> Joshua Teye</span>
+    <span>PhD Candidate in Economics · West Virginia University</span>
+  </div>
+</footer>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  const toggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".nav-links");
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      const open = nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    document.querySelectorAll(".nav-links a").forEach(a => {
+      a.addEventListener("click", () => {
+        nav.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+</script>
+
+</body>
+</html>

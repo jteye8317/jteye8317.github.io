@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jteye8317.github.io/sitemap.xml
